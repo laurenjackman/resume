@@ -1,0 +1,138 @@
+*{
+    /* outline: 2px dashed green; */
+    margin: 0;
+    padding:0;
+}
+/* @media screen and (max-width: 600px) {
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "q"
+        "h"
+        "e"
+        "b"
+        "f";
+}
+ */
+/* step one - build your grid */
+.container {
+    padding:5%;
+    /* height: 100%; */
+    display: grid;
+    grid-gap: 50px;
+    /* this will be  the same for everyone */
+    grid-template-columns: repeat(12, 1fr);
+    /* this will be customized, based on your grid, use pixels or % */
+    grid-template-rows: 5%;
+    /* use letters from step 2 to build the grid */
+    grid-template-areas: 
+        ". . . . . . n n n n n n"
+        "e e e e e e p p p p p p"
+        "s s s s s s p p p p p p"
+        "a a a a a a p p p p p p"
+        "l l l l l l p p p p p p"
+        "c c c c c c f f f f f f";
+}
+
+li{
+    font-weight: 400;
+    padding:2px;
+}
+
+body{
+    font-size: large;
+    font-family: 'Open Sans', sans-serif;}
+
+ul{
+    list-style: none;
+}
+
+ol{
+    list-style: circle;
+}
+
+
+h1{
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+h2{
+    padding-top: 2px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: x-large;
+
+}
+
+h3{
+    padding-top:2px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: large;
+}
+
+h4{
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+
+/* step three - build a grid that becomes active when the pixels are 800px or less */
+@media screen and (max-width: 800px) {
+
+    .container{
+        display: grid;
+        grid-gap: 25px;
+        /* grid is only one column, keep this way */
+        grid-template-columns: 1fr;
+        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-template-rows: auto;
+        grid-template-areas:
+        "n"
+        "e"
+        "s"
+        "a"
+        "l"
+        "c"
+        "p";
+    }
+}
+/* step 1 - assign each of your sections a letter */
+.name {
+    grid-area: n;
+}
+
+.education {
+    grid-area: e;
+    text-align: right;
+}
+
+.skills {
+    grid-area: s;
+    text-align: right;
+}
+
+.awards {
+    grid-area: a;
+    text-align: right;
+}
+
+.leadership{
+    grid-area: l;
+    text-align: right;
+}
+
+.contact{
+    grid-area: c;
+    text-align: right;
+}
+
+.professional-experience{
+    grid-area: p;
+    text-align: left;
+}
