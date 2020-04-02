@@ -136,3 +136,18 @@ h4{
     grid-area: p;
     text-align: left;
 }
+.favicon:hover {
+    fill: red;
+  }
+
+  body {
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+
+}
+  
